@@ -24,10 +24,27 @@ Husk! ingen kommunication mellem Model og View. Gå altid igennem controlleren.
 
 ## Opret GIT repo
 
-echo "# intranet" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:DimitraSis/intranet.git
-git push -u origin main
+- echo "# intranet" >> README.md
+- git init
+- git add README.md
+- git commit -m "first commit"
+- git branch -M main
+- git remote add origin git@github.com:DimitraSis/intranet.git
+- git push -u origin main
+
+## Scopes 
+- request scope : gemme objekter request.setAttribute (key, value)
+- session scope : gemme objekter session.setAttribute (key, value)
+- application scope (contex)
+
+## Sende form - parameter fra en jsp - side til en servlet
+
+
+
+## Forward til website
+```` java
+request.getRequestDispatcher("index.jsp").forward(request,response);
+````
+## JSTL
+- if
+- foreach
