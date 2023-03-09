@@ -10,19 +10,25 @@
 <h1 Intranet for 2. semester hold B:  ${requestScope.login} </h1>
 
 <c:if test="${sessionScope.user ==null}">
-    <p>Du kan logge på her: <a href="login.jsp"></a> </p>
-    <p> <a href="classlist">See class list</a> </p>
-</c:if>
-
-
-<c:if test="${sessionScope.user !=null}">
+    <p>Du kan logge på her: <a href="login.jsp">Login</a> </p>
 
 </c:if>
+Status: ${requestScope.message}
 
-<p>${sessionScope.user.login}${sessionScope.user.password}${sessionScope.user.role}</p>
+<c:if test="${sessionScope.user != null}">
+
+    <p>${sessionScope.user.login} ${sessionScope.user.password} ${sessionScope.user.role}</p>
+    <ul>
+        <li><a href="participateredirect">Tilmed dig en SchoolHack Workshop</a> </li>
+        <li><a href="classlist">Se klasseliste</a></li>
+    </ul>
+
+</c:if>
 
 <br/>
-<a href="hello-servlet">Hello Servlet</a><br/>
-<a href="login.jsp">Login</a>
+<ul>
+    <li><a href="signup.jsp">Opret ny bruger</a></li>
+    <li><a href="hello-servlet">Hello Servlet</a></li>
+</ul>
 </body>
 </html>

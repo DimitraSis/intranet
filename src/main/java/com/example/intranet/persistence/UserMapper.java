@@ -36,5 +36,16 @@ public class UserMapper {
         return userMap.get(login);
     }
 
+    public static User createUser(String login, String password){
 
+        User user= userMap.get(login);
+        if (user==null){
+
+            user=new User(login,password,"user");
+            userMap.put(login,user);
+            return user;
+        }
+        return null;
+
+    }
 }
